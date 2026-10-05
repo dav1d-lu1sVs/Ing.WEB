@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Huellitas a Casa</title>
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         PÁGINA PRINCIPAL
+    ====================================================== -->
+
+    <main id="pagina-inicio" class="pagina">
+
+        <!-- NAVBAR -->
+
+        <section class="menu-section">
+
+            <!-- LOGO -->
+
+            <div class="brand">
+                <h1>
+                    HUELLITAS A
+                    <br>
+                    CASA
+                </h1>
+            </div>
+
+
+            <!-- MENÚ -->
+
+            <div class="menu">
+
+                <div class="boton_menu">
+                    <button
+                        id="btn-inicio"
+                        class="activo"
+                    >
+                        INICIO
+                    </button>
+                </div>
+
+                <div class="boton_menu">
+                    <button id="btn-categorias">
+                        CATEGORIAS
+                    </button>
+                </div>
+
+                <div class="boton_menu">
+                    <button id="btn-admin">
+                        ADMIN
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- BUSCADOR -->
+
+            <form
+                class="barra_busqueda"
+                id="form-busqueda"
+            >
+
+                <input
+                    id="buscador"
+                    type="text"
+                    placeholder="BUSCAR"
+                >
+
+                <button type="submit">
+                    🔍
+                </button>
+
+            </form>
+
+
+            <!-- USUARIO -->
+
+            <button
+                class="usuario"
+                id="btn-login"
+            >
+
+                <div class="icono_usuario">
+                    👤
+                </div>
+
+                <div class="texto_usuario">
+
+                    <span>
+                        Hola
+                    </span>
+
+                    <strong>
+                        Únete a Nosotros
+                    </strong>
+
+                </div>
+
+            </button>
+
+        </section>
+
+
+        <!-- TITULO -->
+
+        <section class="titulo">
+
+            <div class="titulo_letras">
+
+                <h1>
+                    Adopta
+                </h1>
+
+                <h2>
+                    <span class="con">
+                        Con
+                    </span>
+
+                    <span class="nosotros">
+                        Nosotros
+                    </span>
+                </h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- MASCOTAS -->
+
+        <section class="mascotas-section">
+
+            <div
+                class="contenedor-mascotas"
+                id="contenedor-mascotas"
+            >
+
+                <!-- Las tarjetas se generan mediante JavaScript -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         LOGIN
+    ====================================================== -->
+
+    <div
+        id="modal-login"
+        class="modal-overlay oculto"
+    >
+
+        <div class="modal-login">
+
+            <button
+                id="cerrar-login"
+                class="cerrar"
+            >
+                ×
+            </button>
+
+
+            <h2>
+                sign in
+            </h2>
+
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Username"
+            >
+
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+            >
+
+
+            <div class="opciones-login">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                    >
+
+                    Remember me
+
+                </label>
+
+
+                <a href="#">
+                    Forgot Password
+                </a>
+
+            </div>
+
+
+            <button
+                id="btn-login-confirmar"
+                class="btn-login"
+            >
+                LOGIN
+            </button>
+
+
+            <p class="registro">
+                Don't have an account?
+
+                <a href="#">
+                    Register here
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PÁGINA ADMIN
+    ====================================================== -->
+
+    <main
+        id="pagina-admin"
+        class="pagina oculto"
+    >
+
+        <!-- NAVBAR ADMIN -->
+
+        <section class="menu-section">
+
+            <div class="brand">
+
+                <h1>
+                    HUELLITAS A
+                    <br>
+                    CASA
+                </h1>
+
+            </div>
+
+
+            <div class="menu">
+
+                <div class="boton_menu">
+
+                    <button id="admin-inicio">
+                        INICIO
+                    </button>
+
+                </div>
+
+
+                <div class="boton_menu">
+
+                    <button>
+                        CATEGORIAS
+                    </button>
+
+                </div>
+
+
+                <div class="boton_menu">
+
+                    <button class="activo">
+                        ADMIN
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <form class="barra_busqueda">
+
+                <input
+                    type="text"
+                    placeholder="BUSCAR"
+                >
+
+                <button>
+                    🔍
+                </button>
+
+            </form>
+
+
+            <div class="usuario">
+
+                <div class="icono_usuario">
+                    👤
+                </div>
+
+                <div class="texto_usuario">
+
+                    <span>
+                        Hola
+                    </span>
+
+                    <strong>
+                        ADMIN
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTENIDO ADMIN -->
+
+        <section class="admin-container">
+
+
+            <!-- FORMULARIO -->
+
+            <div class="formulario-admin">
+
+                <h2>
+                    Nombre
+                </h2>
+
+                <input
+                    type="text"
+                    id="nombre-mascota"
+                >
+
+
+                <h2>
+                    Edad
+                </h2>
+
+                <input
+                    type="number"
+                    id="edad-mascota"
+                >
+
+
+                <h2>
+                    Vacunas
+                </h2>
+
+                <input
+                    type="text"
+                    id="vacunas-mascota"
+                >
+
+
+                <h2>
+                    Descripción
+                </h2>
+
+                <input  type="text"  id="descripcion-mascota">
+                <button id="btn-agregar"  class="btn-agregar">
+                    AGREGAR
+                </button>
+            </div>
+            <div
+                class="lista-admin"
+                id="lista-admin"
+            >
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

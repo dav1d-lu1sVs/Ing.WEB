@@ -1,0 +1,940 @@
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    background-color: #f6eadb;
+
+    color: #111;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   COLORES
+===================================================== */
+
+:root {
+
+    --verde: #1d4726;
+
+    --verde-claro: #78987e;
+
+    --crema: #f6eadb;
+
+    --dorado: #c7953e;
+
+    --marron: #49352a;
+
+    --blanco: #ffffff;
+
+    --rojo: #a51d20;
+
+    --gris: #969696;
+}
+
+
+/* =====================================================
+   CLASE OCULTAR
+===================================================== */
+
+.oculto {
+    display: none !important;
+}
+
+
+/* =====================================================
+   PÁGINAS
+===================================================== */
+
+.pagina {
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.menu-section {
+
+    min-height: 140px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
+
+    padding: 25px 5%;
+
+    background-color: var(--crema);
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.brand {
+
+    min-width: 250px;
+}
+
+.brand h1 {
+
+    margin: 0;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+
+    text-transform: uppercase;
+
+    letter-spacing: 6px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    flex: 1;
+}
+
+.boton_menu button {
+
+    border: none;
+
+    background: transparent;
+
+    padding: 10px 20px;
+
+    border-radius: 20px;
+
+    font-size: 16px;
+
+    letter-spacing: 1px;
+
+    transition: 0.2s;
+}
+
+.boton_menu button:hover {
+
+    background-color: rgba(73, 53, 42, 0.1);
+}
+
+
+.boton_menu button.activo {
+
+    background-color: var(--marron);
+
+    color: white;
+}
+
+
+/* =====================================================
+   BUSCADOR
+===================================================== */
+
+.barra_busqueda {
+
+    width: 250px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    background-color: white;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+}
+
+.barra_busqueda input {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    padding: 0 18px;
+
+    font-size: 15px;
+}
+
+.barra_busqueda button {
+
+    width: 45px;
+
+    height: 100%;
+
+    border: none;
+
+    background: white;
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   USUARIO
+===================================================== */
+
+.usuario {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border: none;
+
+    background: transparent;
+
+    text-align: left;
+
+    padding: 5px;
+}
+
+.icono_usuario {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 50%;
+
+    background-color: black;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 32px;
+}
+
+.texto_usuario {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.texto_usuario span {
+
+    color: #999;
+
+    font-size: 18px;
+}
+
+.texto_usuario strong {
+
+    font-size: 18px;
+
+    color: #111;
+}
+
+
+/* =====================================================
+   TITULO
+===================================================== */
+
+.titulo {
+
+    min-height: 350px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background-color: var(--crema);
+}
+
+.titulo_letras h1 {
+
+    margin: 0 0 -10px;
+
+    font-size: 40px;
+
+    font-weight: 400;
+
+    color: #999;
+}
+
+.titulo_letras h2 {
+
+    margin: 0;
+
+    font-size: 100px;
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+.con {
+
+    color: var(--verde);
+}
+
+.nosotros {
+
+    color: var(--dorado);
+}
+
+
+/* =====================================================
+   SECCIÓN MASCOTAS
+===================================================== */
+
+.mascotas-section {
+
+    background-color: var(--verde);
+
+    min-height: 500px;
+
+    padding: 60px 5%;
+}
+
+.contenedor-mascotas {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(250px, 350px));
+
+    justify-content: center;
+
+    gap: 70px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card-mascota {
+
+    background-color: white;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    transition: transform 0.2s;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card-mascota:hover {
+
+    transform: translateY(-5px);
+}
+
+
+.card-mascota img {
+
+    width: calc(100% - 30px);
+
+    height: 255px;
+
+    object-fit: cover;
+
+    margin: 15px;
+
+    border-radius: 20px;
+}
+
+
+.contenido-card {
+
+    padding: 5px 30px 30px;
+}
+
+
+.contenido-card h2 {
+
+    color: var(--verde);
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+.contenido-card p {
+
+    color: #999;
+
+    font-size: 16px;
+
+    min-height: 45px;
+}
+
+
+.btn-informacion {
+
+    border: none;
+
+    background-color: var(--dorado);
+
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 25px;
+
+    font-weight: 700;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.btn-informacion:hover {
+
+    transform: scale(1.03);
+}
+
+
+/* =====================================================
+   MODAL LOGIN
+===================================================== */
+
+.modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.modal-login {
+
+    position: relative;
+
+    width: min(700px, 90%);
+
+    background-color: #f5f5fa;
+
+    border-radius: 40px;
+
+    padding: 65px 100px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+
+.modal-login h2 {
+
+    text-align: center;
+
+    font-size: 45px;
+
+    margin-top: 0;
+
+    margin-bottom: 40px;
+}
+
+
+.modal-login > input {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 17px;
+
+    background-color: white;
+}
+
+
+/* =====================================================
+   CERRAR
+===================================================== */
+
+.cerrar {
+
+    position: absolute;
+
+    right: 25px;
+
+    top: 20px;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 35px;
+
+    color: #555;
+}
+
+
+/* =====================================================
+   OPCIONES LOGIN
+===================================================== */
+
+.opciones-login {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 25px 0;
+
+    color: #444;
+}
+
+.opciones-login input {
+
+    width: 18px;
+
+    height: 18px;
+}
+
+.opciones-login a {
+
+    color: #5279a7;
+
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   BOTÓN LOGIN
+===================================================== */
+
+.btn-login {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 40px;
+
+    padding: 17px;
+
+    background-color: #f6a62e;
+
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: 700;
+}
+
+.btn-login:hover {
+
+    background-color: #e9971d;
+}
+
+
+.registro {
+
+    text-align: center;
+
+    color: #557da7;
+
+    margin-bottom: 0;
+}
+
+.registro a {
+
+    color: #557da7;
+
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   ADMIN
+===================================================== */
+
+#pagina-admin {
+
+    min-height: 100vh;
+
+    background-color: var(--crema);
+}
+
+
+/* =====================================================
+   CONTENEDOR ADMIN
+===================================================== */
+
+.admin-container {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    padding: 50px 4%;
+}
+
+
+/* =====================================================
+   FORMULARIO ADMIN
+===================================================== */
+
+.formulario-admin {
+
+    background-color: white;
+
+    border-radius: 35px;
+
+    padding: 40px;
+
+    min-height: 600px;
+}
+
+
+.formulario-admin h2 {
+
+    color: var(--verde);
+
+    font-size: 25px;
+
+    margin-top: 0;
+
+    margin-bottom: 15px;
+}
+
+
+.formulario-admin input {
+
+    width: 100%;
+
+    height: 45px;
+
+    border: none;
+
+    outline: none;
+
+    background-color: var(--crema);
+
+    border-radius: 20px;
+
+    padding: 10px 20px;
+
+    margin-bottom: 30px;
+
+    font-size: 16px;
+}
+
+
+.btn-agregar {
+
+    display: block;
+
+    margin-left: auto;
+
+    margin-top: 20px;
+
+    padding: 20px 65px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background-color: var(--verde);
+
+    color: white;
+
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   LISTA ADMIN
+===================================================== */
+
+.lista-admin {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+/* =====================================================
+   CARD ADMIN
+===================================================== */
+
+.admin-card {
+
+    background-color: var(--verde-claro);
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    min-height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.admin-info h2 {
+
+    margin: 0 0 10px;
+
+    font-size: 25px;
+}
+
+.admin-info p {
+
+    margin: 7px 0;
+
+    font-size: 16px;
+}
+
+
+.acciones-admin {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    min-width: 200px;
+}
+
+
+.btn-editar,
+.btn-eliminar {
+
+    border: none;
+
+    padding: 18px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 500;
+}
+
+
+.btn-editar {
+
+    background-color: var(--verde);
+}
+
+
+.btn-eliminar {
+
+    background-color: var(--rojo);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .menu-section {
+
+        gap: 20px;
+
+    }
+
+    .brand {
+
+        min-width: 190px;
+    }
+
+    .menu {
+
+        gap: 5px;
+    }
+
+    .barra_busqueda {
+
+        width: 180px;
+    }
+
+    .texto_usuario {
+
+        display: none;
+    }
+
+    .contenedor-mascotas {
+
+        grid-template-columns:
+            repeat(2, minmax(250px, 350px));
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .menu-section {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        padding: 20px;
+    }
+
+    .brand {
+
+        text-align: center;
+
+        width: 100%;
+    }
+
+    .menu {
+
+        justify-content: center;
+    }
+
+    .titulo {
+
+        min-height: 280px;
+    }
+
+    .titulo_letras h2 {
+
+        font-size: 65px;
+    }
+
+    .admin-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-mascotas {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+    .titulo_letras h1 {
+        font-size: 30px;
+    }
+
+    .titulo_letras h2 {
+        font-size: 45px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+    }
+
+    .barra_busqueda {
+        width: 100%;
+    }
+
+    .modal-login {
+        padding: 50px 25px;
+    }
+
+    .opciones-login {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .admin-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .acciones-admin {
+        width: 100%;
+    }
+
+}
+
+
